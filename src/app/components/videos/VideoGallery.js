@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
 
 const VideoGallery = () => {
   const [videos, setVideos] = useState([]);
@@ -44,12 +43,15 @@ const VideoGallery = () => {
           <h3 style={{ fontSize: "16px", color: "#333" }}>
             {video.snippet.title}
           </h3>
-          <ReactPlayer
-            url={`https://www.youtube.com/watch?v=${video.id.videoId}`}
-            controls
+          <iframe
             width="100%"
-            height="200px"
-          />
+            height="200"
+            src={`https://www.youtube.com/embed/${video.id.videoId}`}
+            title={video.snippet.title}
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       ))}
     </div>
