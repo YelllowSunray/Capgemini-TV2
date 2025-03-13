@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "vercel-build": "npm install --legacy-peer-deps && npm run build",
+    "build": "next build",
     "dev": "next dev --turbopack",
-    "build": "npm install --force && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -12,8 +13,9 @@
     "axios": "^1.8.3",
     "lightgallery": "^2.8.3",
     "next": "15.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-image-lightbox": "^5.1.4",
     "react-lightgallery": "^0.9.0",
     "react-player": "^2.16.0"
   },
